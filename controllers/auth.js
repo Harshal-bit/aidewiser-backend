@@ -12,6 +12,7 @@ export const register = async (req, res) => {
       email,
       password,
       cpassword
+      
     } = req.body;
 
     console.log(req.body);
