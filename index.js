@@ -9,11 +9,14 @@ import blogRoutes from "./routes/blog.js";
 
 
 dotenv.config();
+const corsOptions = {
+  origin: "http://localhost:3000" // frontend URI (ReactJS)
+}
 
 const app = express();
 
 
-app.use(cors()); 
+app.use(cors(corsOptions)); 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({ extended: true }));
 
